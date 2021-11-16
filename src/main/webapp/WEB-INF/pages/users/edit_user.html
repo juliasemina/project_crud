@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактировать</title>
+</head>
+<body>
+
+<form th:method="patch" th:action="@{/users/edit_user(id=${user.getId()})}" th:object="${user}">
+    <p>
+        <label for="name">Имя: </label>
+        <input type="text" th:field="*{name}" id="name"/>
+    </p>
+    <p>
+        <label for="surname">Фамилия: </label>
+        <input type="text" th:field="*{surname}" id="surname"/>
+    </p>
+    <p>
+        <label for="age">Возраст: </label>
+        <input type="text" th:field="*{age}" id="age"/>
+    </p>
+    <input type="submit" value="Обновить"/>
+</form>
+
+</body>
+</html>

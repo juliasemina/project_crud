@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Приветствие</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div>
+    <p>Найти пользователя по id</p>
+    <form th:action="@{/users/get_user}" method="get">
+        <input type="text" name="id" id="id"/>
+        <input type="submit" value="Найти"/>
+    </form>
+    <p>
+        <a href="users/list_users">Показать всех пользователей</a>
+    </p>
+    <p>
+        <a href="/users/add_user">Добавить нового пользователя</a>
+    </p>
+</div>
+</body>
+</html>
